@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xqtc.api.mapper.XqtcAirportCoordinateMapper">
+  <resultMap id="BaseResultMap" type="com.xqtc.api.entity.XqtcAirportCoordinateEntity">
+    <id column="xac_id" jdbcType="INTEGER" property="xacId" />
+    <result column="xac_cityname" jdbcType="VARCHAR" property="xacCityname" />
+    <result column="xac_airportname" jdbcType="VARCHAR" property="xacAirportname" />
+    <result column="xac_key" jdbcType="VARCHAR" property="xacKey" />
+    <result column="xac_lon" jdbcType="VARCHAR" property="xacLon" />
+    <result column="xac_lat" jdbcType="VARCHAR" property="xacLat" />
+    <result column="xac_state" jdbcType="INTEGER" property="xacState" />
+    <result column="xac_cityid" jdbcType="INTEGER" property="xacCityid" />
+  </resultMap>
+
+  <!-- ========================根据城市名称查询城市所有机场名称============================================== -->
+  <select id="selectAirportByCityName" parameterType="java.lang.String" resultType="java.lang.String">
+    select
+    xac_airportname
+    from xqtc_airport_coordinate
+    where xac_cityname = #{xacCityname,jdbcType=VARCHAR}
+  </select>
+
+
+</mapper>

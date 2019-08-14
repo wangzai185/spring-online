@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xqtc.api.mapper.ChannelProductMapper">
+  <resultMap id="BaseResultMap" type="com.xqtc.api.entity.ChannelProductEntity">
+    <id column="cp_id" jdbcType="BIGINT" property="cpId" />
+    <result column="cc_id" jdbcType="INTEGER" property="ccId" />
+    <result column="xp_id" jdbcType="BIGINT" property="xpId" />
+    <result column="park_name" jdbcType="VARCHAR" property="parkName" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="site" jdbcType="VARCHAR" property="site" />
+    <result column="park_type" jdbcType="INTEGER" property="parkType" />
+    <result column="service" jdbcType="VARCHAR" property="service" />
+    <result column="charge_type" jdbcType="INTEGER" property="chargeType" />
+    <result column="free_mins" jdbcType="INTEGER" property="freeMins" />
+    <result column="overtime_price" jdbcType="REAL" property="overtimePrice" />
+    <result column="sales_init" jdbcType="INTEGER" property="salesInit" />
+    <result column="charge" jdbcType="VARCHAR" property="charge" />
+    <result column="channel_charge" jdbcType="VARCHAR" property="channelCharge" />
+    <result column="park_charge" jdbcType="VARCHAR" property="parkCharge" />
+    <result column="is_partner" jdbcType="INTEGER" property="isPartner" />
+    <result column="prepay_money" jdbcType="REAL" property="prepayMoney" />
+    <result column="deduction_money" jdbcType="REAL" property="deductionMoney" />
+    <result column="deduction_day" jdbcType="INTEGER" property="deductionDay" />
+    <result column="thumbnail" jdbcType="VARCHAR" property="thumbnail" />
+    <result column="first_pic" jdbcType="VARCHAR" property="firstPic" />
+    <result column="detail_pics" jdbcType="VARCHAR" property="detailPics" />
+    <result column="create_time" jdbcType="BIGINT" property="createTime" />
+    <result column="update_time" jdbcType="BIGINT" property="updateTime" />
+    <result column="creator" jdbcType="VARCHAR" property="creator" />
+    <result column="updater" jdbcType="VARCHAR" property="updater" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="state" jdbcType="INTEGER" property="state" />
+    <result column="start_day" jdbcType="INTEGER" property="startDay" />
+  </resultMap>
+
+  <!-- ===========================根据渠道id 查询该渠道下开通的城市==================================== -->
+  <select id="selectCityByChannelId" parameterType="java.lang.Integer" resultType="java.lang.String">
+    select DISTINCT city
+    from channel_product
+    where cc_id = #{cc_id,jdbcType=INTEGER}
+  </select>
+
+
+</mapper>

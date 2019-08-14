@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xqtc.api.mapper.ChannelUserMapper">
+  <resultMap id="BaseResultMap" type="com.xqtc.api.entity.ChannelUserEntity">
+    <id column="cu_id" jdbcType="BIGINT" property="cuId" />
+    <result column="channel_id" jdbcType="INTEGER" property="channelId" />
+    <result column="open_id" jdbcType="VARCHAR" property="openId" />
+    <result column="unni_id" jdbcType="BIGINT" property="unniId" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="xco_id" jdbcType="BIGINT" property="xcoId" />
+    <result column="state" jdbcType="INTEGER" property="state" />
+    <result column="create_time" jdbcType="BIGINT" property="createTime" />
+    <result column="update_time" jdbcType="BIGINT" property="updateTime" />
+    <result column="creator" jdbcType="VARCHAR" property="creator" />
+    <result column="updator" jdbcType="VARCHAR" property="updator" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+
+
+</mapper>

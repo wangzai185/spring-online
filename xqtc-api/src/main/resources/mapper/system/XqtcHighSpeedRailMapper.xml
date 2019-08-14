@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xqtc.api.mapper.XqtcHighSpeedRailMapper">
+    <resultMap id="BaseResultMap" type="com.xqtc.api.entity.XqtcHighSpeedRailEntity">
+        <id column="xhsr_id" jdbcType="INTEGER" property="xhsrId"/>
+        <result column="xhsr_city_name" jdbcType="VARCHAR" property="xhsrCityName"/>
+        <result column="xhsr_high_speed_name" jdbcType="VARCHAR" property="xhsrHighSpeedName"/>
+        <result column="xhsr_key" jdbcType="VARCHAR" property="xhsrKey"/>
+        <result column="xhsr_state" jdbcType="TINYINT" property="xhsrState"/>
+        <result column="xhsr_cityid" jdbcType="INTEGER" property="xhsrCityid"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="is_deleted" jdbcType="TINYINT" property="isDeleted"/>
+    </resultMap>
+    <!--  =============查询城市开通的停车场类型 机场 高铁站 港口 迪士尼 ============================   -->
+    <select id="selectHighSpeedByCityName" parameterType="com.xqtc.api.entity.XqtcHighSpeedRailEntity" resultType="String">
+
+     select
+    xhsr_high_speed_name
+    from xqtc_high_speed_rail
+    where xhsr_city_name =#{arg0} and xhsr_state =  #{arg1}
+
+  </select>
+</mapper>
+
+

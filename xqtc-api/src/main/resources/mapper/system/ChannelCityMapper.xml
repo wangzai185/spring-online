@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xqtc.api.mapper.ChannelCityMapper">
+  <resultMap id="BaseResultMap" type="com.xqtc.api.entity.ChannelCityEntity">
+    <id column="city_id" jdbcType="BIGINT" property="cityId" />
+    <result column="province_name" jdbcType="VARCHAR" property="provinceName" />
+    <result column="province_code" jdbcType="VARCHAR" property="provinceCode" />
+    <result column="city_code" jdbcType="VARCHAR" property="cityCode" />
+    <result column="park_type" jdbcType="INTEGER" property="parkType" />
+    <result column="city_name" jdbcType="VARCHAR" property="cityName" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="is_deleted" jdbcType="INTEGER" property="isDeleted" />
+  </resultMap>
+
+    <!--  =============查询城市开通的停车场类型 机场 高铁站 港口 迪士尼 ============================   -->
+  <select id="selectByParkType" parameterType="java.lang.String" resultType="java.lang.String">
+    select  DISTINCT park_type
+    from channel_city
+    where city_name = #{cityName,jdbcType=VARCHAR}
+  </select>
+</mapper>

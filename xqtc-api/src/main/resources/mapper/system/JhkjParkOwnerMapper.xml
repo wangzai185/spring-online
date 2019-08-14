@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xqtc.api.mapper.JhkjParkOwnerMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xqtc.api.entity.JhkjParkOwner">
+        <id column="po_id" property="poId" />
+        <result column="po_icon" property="poIcon" />
+        <result column="po_account" property="poAccount" />
+        <result column="po_nick_name" property="poNickName" />
+        <result column="po_sex" property="poSex" />
+        <result column="po_birth" property="poBirth" />
+        <result column="po_password" property="poPassword" />
+        <result column="po_id_number" property="poIdNumber" />
+        <result column="po_channel_id" property="poChannelId" />
+        <result column="po_freeze_balance" property="poFreezeBalance" />
+        <result column="po_balance" property="poBalance" />
+        <result column="po_remark" property="poRemark" />
+        <result column="po_is_child" property="poIsChild" />
+        <result column="child_oauth_id" property="childOauthId" />
+        <result column="po_is_duty" property="poIsDuty" />
+        <result column="po_father_id" property="poFatherId" />
+        <result column="po_phone_type" property="poPhoneType" />
+        <result column="po_phone_im" property="poPhoneIm" />
+        <result column="po_state" property="poState" />
+        <result column="is_deleted" property="isDeleted" />
+        <result column="im_push_id" property="imPushId" />
+        <result column="im_id" property="imId" />
+        <result column="last_login_time" property="lastLoginTime" />
+        <result column="create_time" property="createTime" />
+        <result column="modify_time" property="modifyTime" />
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xqtc.api.mapper.XqtcParkMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xqtc.api.entity.XqtcParkEntity">
+        <id column="xp_id" property="xpId" />
+        <result column="xph_id" property="xphId" />
+        <result column="xp_name" property="xpName" />
+        <result column="xp_address" property="xpAddress" />
+        <result column="xp_province" property="xpProvince" />
+        <result column="xp_city" property="xpCity" />
+        <result column="xp_provinceid" property="xpProvinceid" />
+        <result column="xp_cityid" property="xpCityid" />
+        <result column="xp_longitudelatitude" property="xpLongitudelatitude" />
+        <result column="xp_airportCoordinate" property="xpAirportcoordinate" />
+        <result column="xp_railwayStationCoordinate" property="xpRailwaystationcoordinate" />
+        <result column="xp_type" property="xpType" />
+        <result column="xp_time" property="xpTime" />
+        <result column="xp_state" property="xpState" />
+        <result column="xp_incount" property="xpIncount" />
+        <result column="xp_inempty" property="xpInempty" />
+        <result column="xp_outcount" property="xpOutcount" />
+        <result column="xp_outempty" property="xpOutempty" />
+        <result column="xp_starlevel" property="xpStarlevel" />
+        <result column="xp_remark" property="xpRemark" />
+        <result column="xp_dutyphone" property="xpDutyphone" />
+        <result column="xp_introduce" property="xpIntroduce" />
+        <result column="xp_xppfids" property="xpXppfids" />
+        <result column="xp_chargtype" property="xpChargtype" />
+        <result column="xp_prepay" property="xpPrepay" />
+        <result column="xp_idcertified" property="xpIdcertified" />
+        <result column="xp_licencedcertified" property="xpLicencedcertified" />
+        <result column="xp_artificialcertified" property="xpArtificialcertified" />
+        <result column="xp_totalorder" property="xpTotalorder" />
+        <result column="xp_distance" property="xpDistance" />
+        <result column="category" property="category" />
+        <result column="openingBegin" property="openingBegin" />
+        <result column="openingEnd" property="openingEnd" />
+        <result column="serviceItem" property="serviceItem" />
+        <result column="serviceInfo" property="serviceInfo" />
+        <result column="freeTimeBegin" property="freeTimeBegin" />
+        <result column="creator" property="creator" />
+        <result column="updater" property="updater" />
+        <result column="createDate" property="createDate" />
+        <result column="updateDate" property="updateDate" />
+        <result column="version" property="version" />
+        <result column="freeTimeEnd" property="freeTimeEnd" />
+        <result column="prebook" property="prebook" />
+        <result column="freeTimeBegin2" property="freeTimeBegin2" />
+        <result column="freeTimeEnd2" property="freeTimeEnd2" />
+        <result column="reserved1" property="reserved1" />
+        <result column="reserved2" property="reserved2" />
+        <result column="reserved3" property="reserved3" />
+        <result column="reserved4" property="reserved4" />
+        <result column="reserved5" property="reserved5" />
+        <result column="reserved6" property="reserved6" />
+        <result column="reserved7" property="reserved7" />
+        <result column="bizname" property="bizname" />
+        <result column="online" property="online" />
+        <result column="area" property="area" />
+        <result column="xp_ranking" property="xpRanking" />
+        <result column="o_count_buff" property="oCountBuff" />
+        <result column="i_count" property="iCount" />
+        <result column="i_count_buff" property="iCountBuff" />
+        <result column="xp_overtimefee" property="xpOvertimefee" />
+        <result column="xp_specialPrice" property="xpSpecialprice" />
+        <result column="xp_vip" property="xpVip" />
+        <result column="xp_baidumapurl" property="xpBaidumapurl" />
+        <result column="xp_gaodemapurl" property="xpGaodemapurl" />
+        <result column="xp_qqmapurl" property="xpQqmapurl" />
+        <result column="xp_partner" property="xpPartner" />
+        <result column="xp_deposit" property="xpDeposit" />
+        <result column="xp_emergency_contact" property="xpEmergencyContact" />
+        <result column="xp_keyword" property="xpKeyword" />
+        <result column="xp_monthly_sales_adjust_value" property="xpMonthlySalesAdjustValue" />
+        <result column="xp_car_seating" property="xpCarSeating" />
+        <result column="xp_to_airport_minutes" property="xpToAirportMinutes" />
+        <result column="xp_car_cover" property="xpCarCover" />
+        <result column="xp_car_wash" property="xpCarWash" />
+        <result column="xp_activity" property="xpActivity" />
+        <result column="xp_on_the_pin" property="xpOnThePin" />
+        <result column="xp_instead_park_type" property="xpInsteadParkType" />
+        <result column="xp_instead_park_amount" property="xpInsteadParkAmount" />
+        <result column="xp_instead_park_inventory" property="xpInsteadParkInventory" />
+        <result column="xp_instead_state" property="xpInsteadState" />
+        <result column="xp_vipPrice" property="xpVipprice" />
+        <result column="xp_business_time_str" property="xpBusinessTimeStr" />
+        <result column="contacts_phone" property="contactsPhone" />
+        <result column="urgent_name" property="urgentName" />
+    </resultMap>
+
+</mapper>

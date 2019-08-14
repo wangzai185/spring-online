@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xqtc.api.mapper.XqtcOrdersMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.xqtc.api.entity.XqtcOrdersEntity">
+        <id column="xo_id" property="xoId" />
+        <result column="xco_id" property="xcoId" />
+        <result column="xp_id" property="xpId" />
+        <result column="xo_number" property="xoNumber" />
+        <result column="xo_car_ownernick" property="xoCarOwnernick" />
+        <result column="xo_platenumber" property="xoPlatenumber" />
+        <result column="xo_time" property="xoTime" />
+        <result column="xo_starttime" property="xoStarttime" />
+        <result column="xo_endtime" property="xoEndtime" />
+        <result column="xo_type" property="xoType" />
+        <result column="xo_paystate" property="xoPaystate" />
+        <result column="xo_realstarttime" property="xoRealstarttime" />
+        <result column="xo_realendtime" property="xoRealendtime" />
+        <result column="xo_realpayable" property="xoRealpayable" />
+        <result column="xo_realpay" property="xoRealpay" />
+        <result column="xo_state" property="xoState" />
+        <result column="xo_payable" property="xoPayable" />
+        <result column="xo_pay" property="xoPay" />
+        <result column="xo_prepay" property="xoPrepay" />
+        <result column="xo_qrcode" property="xoQrcode" />
+        <result column="xo_parkname" property="xoParkname" />
+        <result column="xo_parkaddress" property="xoParkaddress" />
+        <result column="xo_parktype" property="xoParktype" />
+        <result column="xo_charge" property="xoCharge" />
+        <result column="xo_parkday" property="xoParkday" />
+        <result column="xo_preferential" property="xoPreferential" />
+        <result column="xo_discountamount" property="xoDiscountamount" />
+        <result column="xo_startflightnumber" property="xoStartflightnumber" />
+        <result column="xo_returnflightnumber" property="xoReturnflightnumber" />
+        <result column="xo_numberofpeers" property="xoNumberofpeers" />
+        <result column="xo_amountofmoney" property="xoAmountofmoney" />
+        <result column="xo_mindays" property="xoMindays" />
+        <result column="xo_payed" property="xoPayed" />
+        <result column="xo_enter_xpid" property="xoEnterXpid" />
+        <result column="xo_end_xpid" property="xoEndXpid" />
+        <result column="updater" property="updater" />
+        <result column="updateDate" property="updateDate" />
+        <result column="version" property="version" />
+        <result column="orderCategory" property="orderCategory" />
+        <result column="finalCostInfo" property="finalCostInfo" />
+        <result column="xp_discount" property="xpDiscount" />
+        <result column="xo_bookTime" property="xoBooktime" />
+        <result column="xo_bookType" property="xoBooktype" />
+        <result column="xo_source" property="xoSource" />
+        <result column="remark" property="remark" />
+        <result column="xo_valetFee" property="xoValetfee" />
+        <result column="carcount" property="carcount" />
+        <result column="xo_overtimefee" property="xoOvertimefee" />
+        <result column="xpe_id" property="xpeId" />
+        <result column="xo_additionalinfo" property="xoAdditionalinfo" />
+        <result column="xo_isdrop" property="xoIsdrop" />
+        <result column="xo_ispending" property="xoIspending" />
+        <result column="car_owner_remark" property="carOwnerRemark" />
+        <result column="is_appraisedflag" property="isAppraisedflag" />
+        <result column="xo_discount" property="xoDiscount" />
+        <result column="xo_cancelreason" property="xoCancelreason" />
+        <result column="xo_channel_price" property="xoChannelPrice" />
+        <result column="xo_park_price" property="xoParkPrice" />
+        <result column="xo_vip_coupon_id" property="xoVipCouponId" />
+        <result column="xo_book_coupon_id" property="xoBookCouponId" />
+        <result column="xo_book_coupon_money" property="xoBookCouponMoney" />
+        <result column="xo_final_coupon_id" property="xoFinalCouponId" />
+        <result column="xo_final_coupon_money" property="xoFinalCouponMoney" />
+        <result column="xo_push_state" property="xoPushState" />
+        <result column="xo_premoney" property="xoPremoney" />
+        <result column="xo_prerealmoney" property="xoPrerealmoney" />
+        <result column="xo_premindays" property="xoPremindays" />
+        <result column="xo_parkcategory" property="xoParkcategory" />
+        <result column="xo_partnerscale" property="xoPartnerscale" />
+        <result column="xo_book_xqmoney" property="xoBookXqmoney" />
+        <result column="xo_book_paymoney" property="xoBookPaymoney" />
+        <result column="xo_final_xqmoney" property="xoFinalXqmoney" />
+        <result column="xo_final_paymoney" property="xoFinalPaymoney" />
+        <result column="xo_offlinepay" property="xoOfflinepay" />
+        <result column="xo_moneyfromchannel" property="xoMoneyfromchannel" />
+        <result column="xo_moneytopark" property="xoMoneytopark" />
+        <result column="xo_profit" property="xoProfit" />
+        <result column="xo_adjust" property="xoAdjust" />
+        <result column="xo_settlestatus" property="xoSettlestatus" />
+        <result column="xo_book_pricelist" property="xoBookPricelist" />
+        <result column="xo_final_pricelist" property="xoFinalPricelist" />
+        <result column="xo_book_days" property="xoBookDays" />
+        <result column="xo_final_days" property="xoFinalDays" />
+        <result column="xo_exceed_price" property="xoExceedPrice" />
+        <result column="xo_freeminutes" property="xoFreeminutes" />
+        <result column="xo_paiddays" property="xoPaiddays" />
+        <result column="xo_paidmoney" property="xoPaidmoney" />
+        <result column="outFlightNo" property="outFlightNo" />
+        <result column="xo_book_listAddOnSale" property="xoBookListaddonsale" />
+        <result column="xo_final_listAddOnSale" property="xoFinalListaddonsale" />
+        <result column="isPartnerOrder" property="isPartnerOrder" />
+        <result column="instead_park_type" property="insteadParkType" />
+        <result column="delayTime" property="delayTime" />
+        <result column="payType" property="payType" />
+        <result column="hospitalChargeInfo" property="hospitalChargeInfo" />
+        <result column="isotth" property="isotth" />
+    </resultMap>
+
+</mapper>
